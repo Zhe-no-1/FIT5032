@@ -1,8 +1,15 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import Week12View from '../views/Week12View.vue'
 
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
-    // your routes here
+    {
+      path: '/',
+      name: 'week12',
+      component: Week12View,
+    },
   ],
 })
+
+export default router
